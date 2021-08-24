@@ -1,9 +1,9 @@
 <!-- BEGIN: Top HTML -->
 <!DOCTYPE html>
 <!-- include aframe -->
-<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <!-- include ar.js -->
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 <!-- to load .ply model -->
 <script src="https://rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.loaders.min.js"></script>
@@ -101,25 +101,25 @@ if (markerFound == 1) {
 <a-asset-item id="Model_Asset_obj_0" src="models/Freecarmodel_v1.obj"></a-asset-item>
 <a-asset-item id="Model_Asset_mtl_0" src="models/Freecarmodel_v1.mtl"></a-asset-item>
 
-<a-asset-item id="Model_Asset_obj_0" src="models/Freecarmodel_v12.obj"></a-asset-item>
-<a-asset-item id="Model_Asset_mtl_0" src="models/Freecarmodel_v12.mtl"></a-asset-item>
-
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-<a-marker id="marker" type="pattern" preset="custom" src="pattern-CarTop (2).patt" url="pattern-CarTop (2).patt" emitevents="true" button>
-<a-marker id="marker" type="pattern" preset="custom" src="pattern-CarSide.patt" url="pattern-CarSide.patt" emitevents="true" button>
+<a-nft
+                type="nft"
+                url="CarTop"
+                smooth="True"
+                smoothCount="10"
+                smoothTolerance="0.01"
+                smoothThreshold="5">
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
 <a-entity obj-model="obj: #Model_Asset_obj_0; mtl: #Model_Asset_mtl_0" scale="0.1 0.1 0.1" class="intersectable" position="0 0 0" rotation="0 -180 0" color="#969696" 
 ></a-entity>
-<a-entity obj-model="obj: #Model_Asset_obj_0; mtl: #Model_Asset_mtl_0" scale="0.1099866 0.1099866 0.1099866" class="intersectable" position="-0.028 0.118 0.176" rotation="353.4734 -80.7434 -306.4189" color="#969696" 
-></a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
-</a-marker>
+</a-nft>
 <a-entity camera></a-entity>
 </a-scene>
 </body>
